@@ -6,7 +6,7 @@ it is a simple <b>Flask</b> web project that consists of <b>Welcome</b>, <b>Sign
 Python3, MySQL-server, Flask
 ```
 
-## Setup & installation
+## Setup & Installation
 ### 1) Setup your database: 
 * After the installation of MySQL server, run it.
 ```
@@ -26,3 +26,9 @@ from app import db
 db.create_all()
 ```
 * Exit the <b>Python</b> shell.
+
+### 3) Edit the code with your MySQL server credentials:
+* Edit this line of code in <b>app.py</b>
+```python
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://USERNAME:PASSWORD@localhost/test_accounts'
+```
