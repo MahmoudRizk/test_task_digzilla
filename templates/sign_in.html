@@ -14,5 +14,8 @@
     <input type="submit" value="Sign_in">
     <input type="submit" value="sign_up" formaction="/sign_up">
   </form>
+    {% if error %}
+    <H1>{{error_message}}</H1>
+    {% endif%}
 </body>
 </html>
