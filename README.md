@@ -7,7 +7,7 @@ Python3, MySQL-server, Flask
 ```
 
 ## Setup & installation
-#### 1) Setup your database: 
+### 1) Setup your database: 
 * After the installation of MySQL server, run it.
 ```
 mysql -u USERNAME -p PASSWORD
@@ -17,3 +17,12 @@ mysql -u USERNAME -p PASSWORD
 mysql> CREATE DATABASE test_accounts;
 mysql> use test_accounts;
 ```
+### 2) Create the table schema:
+* Change your directory to <b>test_task_digzilla</b>, then run <b>Python3</b> shell.
+* Run this code in the shell.
+```python
+
+from app import db
+db.create_all()
+```
+* Exit the <b>Python</b> shell.
